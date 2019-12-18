@@ -1,4 +1,4 @@
-# nodejs-k8s
+# Simple Node JS Kubernetes Deployement
 
 A Hello world Node JS app.
 Application code is in [node-app](node-app).
@@ -22,10 +22,12 @@ docker tag nodejs <ecr-link>
 docker push <ecr-link>
 ```
 Now edit the image URL in [k8s.yml](k8s.yml#L21). This should be automated via CI/CD pipeline.
+
 Before we Apply this K8s manifest we need to create ImagePull Secret, so that kubernetes will be able
 to pull the image. 
 
 from last steps, we already loged in to ECR. This has created a config in ~/.docker/config.json
+Lets create kubernetes secret out of it.
 ```
 kubectl create secret generic regcred \
     --from-file=.dockerconfigjson=/root/.docker/config.json \
@@ -44,3 +46,4 @@ kubectl apply -f ./k8s.yml
 # to see the deployed artifcats
 kubectl get all
 ```
+
