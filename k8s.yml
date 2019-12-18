@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: node-client
-        image: pirate007/node-client
+        image: pirate007/nodejs
         resources:
           limits:
             memory: "128Mi"
