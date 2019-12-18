@@ -25,6 +25,8 @@ spec:
             cpu: "500m"
         ports:
         - containerPort: 3000
+      imagePullSecrets:
+      - name: regcred
 ---
 apiVersion: v1
 kind: Service
