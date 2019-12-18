@@ -48,6 +48,6 @@ kubectl get all
 ```
 
 This is a simplest design.
-We modularize K8s files or use Helm.
-ECR login is temporary. IAM role would be better idea it K8s is in AWS.
+We should modularize K8s files or use Helm.
+ECR login is temporary. IAM role would be better idea if K8s is in AWS.
 And of course CI/CD.
