@@ -8,10 +8,10 @@ Usage
 docker build -t node .
 
 # Run docker image
-docker run -d -p 8080:8080 --name hello-world-node node
+docker run -d -p 3000:3000 --name hello-world-node node
 
 # Access the app
-curl localhost:8080
+curl localhost:3000
 ```
 
 ```sh
