@@ -1,5 +1,5 @@
 # Node Alpine Image
-FROM node:10.15-alpine
+FROM node:10.20.1-alpine
 # Update pacakges
 RUN apt-get update && apt-get upgrade
 # Adding Tini for SIGKILL workaround
