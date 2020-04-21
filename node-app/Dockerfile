@@ -1,5 +1,7 @@
 # Node Alpine Image
 FROM node:10.15-alpine
+# Update pacakges
+RUN apt-get update && apt-get upgrade
 # Adding Tini for SIGKILL workaround
 RUN apk add --no-cache tini
 # Exposing app on port 3000
